@@ -35,15 +35,33 @@ class PaymentPeriod:
 
 
 class Payment:
-    def __init__(self, payment_period, lecturer):
-        self.lecturer = Lecturer(lecturer)
-        self.payment_period = PaymentPeriod(payment_period)
-        self.schedule = ruz.person_lessons(self.lecturer.email, utils.format_date(self.payment_period.start_date),
-                                           utils.format_date(self.payment_period.end_date))
+    def __init__(self, payment_period: PaymentPeriod, lecturer: Lecturer):
+        self.lecturer = lecturer
+        self.payment_period = payment_period
+        self.schedule = Schedule(payment_period, lecturer)
+
+
+    def get_payment(self):
         self.amount = 0
+        for lesson in self.schedule.lessons:
+            if lesson.kind_of_work == 'Лекция':
+                self.amount += self.payment_period.lecture_payment_rate
+            elif lesson.kind_of_work == 'Семинар':
+                self.amount += self.payment_period.seminar_payment_rate
+            elif lesson.kind_of_work == 'Практическое занятие':
+                self.amount += self.payment_period.practice_payment_rate
+        return self.amount
 
 
 class StudyPlan:
     def __init__(self, year, program):
         self.year = year
         self.program = program
+
+
+class Schedule:
+	def __init__(self, payment_period: PaymentPeriod, lecturer: Lecturer):
+		self.payment_period = payment_period
+		self.lecturer = lecturer
+		timetable = ruz.person_lessons(lecturer.email, utils.format_date(payment_period.start_date), utils.format_date(payment_period.end_date))
+		self.lessons = [Lesson(lecturer.email, item['date'], item['discipline'], item['disciplineOid'],item['disciplineinplan'], item['parentschedule'],item['kindOfWork']) for item in timetable]

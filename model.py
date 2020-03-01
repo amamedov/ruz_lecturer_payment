@@ -3,7 +3,8 @@ import utils
 
 
 class Lesson:
-    def __init__(self, lecturer, date, discipline, discipline_oid, discipline_in_plan, parent_schedule, kind_of_work):
+    def __init__(self, id, lecturer, date, discipline, discipline_oid, discipline_in_plan, parent_schedule, kind_of_work):
+        self.id = id
         self.date = date
         self.lecturer = lecturer
         self.discipline = discipline
@@ -19,14 +20,16 @@ class Lecturer:
 
 
 class Stream:
-    def __init__(self, name, year, faculty):
+    def __init__(self, id, name, year, faculty):
+        self.id = id
         self.faculty = faculty
         self.name = name
         self.year = year
 
 
 class PaymentPeriod:
-    def __init__(self, start_date, end_date, lecture_payment_rate, practice_payment_rate, seminar_payment_rate):
+    def __init__(self, id, start_date, end_date, lecture_payment_rate, practice_payment_rate, seminar_payment_rate):
+        self.id = id
         self.start_date = start_date
         self.end_date = end_date
         self.lecture_payment_rate = lecture_payment_rate
@@ -54,9 +57,10 @@ class Payment:
 
 
 class StudyPlan:
-    def __init__(self, year, program):
+    def __init__(self, year, program, stream:Stream):
         self.year = year
         self.program = program
+        self.stream = stream
 
 
 class Schedule:

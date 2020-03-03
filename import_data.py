@@ -12,7 +12,7 @@ def import_data():
         lecturer = lecturers_from_db.fetchone()
         if lecturer is None:
             break
-        lecturers.append(model.Lecturer(lecturer[0]))
+        lecturers.append(model.Lecturer(lecturer.id, lecturer.email, lecturer.name, lecturer.surname, lecturer.patronymic))
     streams = []
     streams_from_db = cursor.execute('select * from Stream')
     while True:
@@ -45,7 +45,3 @@ def import_data():
                                        next([lecturer for lecturer in lecturers if lecturer.id == payment.lecturer_id])))
     return lecturers, streams, study_plans, payment_periods, payments
 
-
-    
-
-import_data()

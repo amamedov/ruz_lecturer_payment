@@ -15,8 +15,12 @@ class Lesson:
 
 
 class Lecturer:
-    def __init__(self, email):
+    def __init__(self, id, email, name, surname, patronymic):
+        self.id = id
         self.email = email
+        self.name = name
+        self.surname = surname
+        self.patronymic = patronymic
 
 
 class Stream:

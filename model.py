@@ -16,10 +16,10 @@ class Lesson:
 
 class Lecturer:
     def __init__(self, id, email, name, surname, patronymic):
-        self.email = email
         self.id = id
+        self.email = email
         self.name = name
-        self.surname = surname 
+        self.surname = surname
         self.patronymic = patronymic
 
 

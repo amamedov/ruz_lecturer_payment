@@ -45,7 +45,3 @@ def import_data():
                                        next([lecturer for lecturer in lecturers if lecturer.id == payment.lecturer_id])))
     return lecturers, streams, study_plans, payment_periods, payments
 
-
-    
-
-import_data()

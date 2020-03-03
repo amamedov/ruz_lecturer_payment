@@ -3,7 +3,10 @@ create database [test];
 use [test];
 create table Lecturer(
 id int identity(1,1) Primary key clustered,
-email nvarchar(50) unique not null);
+email nvarchar(50) unique not null,
+[name] nvarchar(30) NOT NULL,
+surname nvarchar(30) not null,
+patronymic nvarchar(30) not null);
 create table Stream(
 id int identity(1,1) primary key clustered,
 faculty nvarchar(50) NOT NULL,

@@ -3,8 +3,7 @@ import utils
 
 
 class Lesson:
-    def __init__(self, id, lecturer, date, discipline, discipline_oid, discipline_in_plan, parent_schedule, kind_of_work):
-        self.id = id
+    def __init__(self, lecturer, date, discipline, discipline_oid, discipline_in_plan, parent_schedule, kind_of_work):
         self.date = date
         self.lecturer = lecturer
         self.discipline = discipline

@@ -31,4 +31,4 @@ lecturer_id int not null,
 payment_period_id int not null,
 amount dec not null,
 foreign key (lecturer_id) references Lecturer(id),
-foreign key (payment_period_id) references PaymentPeriod(id))
+foreign key (payment_period_id) references PaymentPeriod(id));

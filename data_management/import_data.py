@@ -48,5 +48,6 @@ def import_data():
               break
           payments.append(model.Payment(next([period for period in payment_periods if period.id == payment.payment_period_id]),
                                        next([lecturer for lecturer in lecturers if lecturer.id == payment.lecturer_id])))
+    connection.close()
     return lecturers, streams, study_plans, payment_periods, payments
 

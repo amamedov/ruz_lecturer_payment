@@ -8,3 +8,4 @@ for item in os.scandir(path_to_procedures):
     if os.path.isfile(os.path.join(path_to_procedures,item)):
         with open(os.path.join(path_to_procedures,item), 'r') as f:
             cursor.execute(f.read())
+connection.close()

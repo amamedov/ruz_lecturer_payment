@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\create_db_elements",
+    "\\create_db_elements\\create_procedures",
+    "\\data_management"
   ],
-  "SelectedNode": "\\import_data.py",
+  "SelectedNode": "\\data_management",
   "PreviewInSolutionExplorer": false
 }

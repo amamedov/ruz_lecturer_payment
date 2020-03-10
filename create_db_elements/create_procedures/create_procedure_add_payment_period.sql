@@ -3,7 +3,7 @@ create procedure Add_payment_period
 	, @end_date date
 	, @lecture_payment_rate dec
 	, @practice_payment_rate dec
-	, @seminar_practice_rate dec
+	, @seminar_payment_rate dec
 as
 	insert into PaymentPeriod
 	values

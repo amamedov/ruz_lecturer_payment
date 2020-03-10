@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\create_db_elements",
-    "\\create_db_elements\\create_procedures",
     "\\data_management"
   ],
-  "SelectedNode": "\\data_management",
+  "SelectedNode": "\\create_db_elements\\create_tables_and_db_script.sql",
   "PreviewInSolutionExplorer": false
 }

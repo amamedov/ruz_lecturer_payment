@@ -45,10 +45,9 @@ class Payment:
         self.lecturer = lecturer
         self.payment_period = payment_period
         self.schedule = Schedule(payment_period, lecturer)
-
+        self.amount = 0
 
     def get_payment(self):
-        self.amount = 0
         for lesson in self.schedule.lessons:
             if lesson.kind_of_work == 'Лекция':
                 self.amount += self.payment_period.lecture_payment_rate
@@ -60,15 +59,18 @@ class Payment:
 
 
 class StudyPlan:
-    def __init__(self, year, program, stream:Stream):
+    def __init__(self, year, program, stream: Stream):
         self.year = year
         self.program = program
         self.stream = stream
 
 
 class Schedule:
-	def __init__(self, payment_period: PaymentPeriod, lecturer: Lecturer):
-		self.payment_period = payment_period
-		self.lecturer = lecturer
-		timetable = ruz.person_lessons(lecturer.email, utils.format_date(payment_period.start_date), utils.format_date(payment_period.end_date))
-		self.lessons = [Lesson(lecturer.email, item['date'], item['discipline'], item['disciplineOid'],item['disciplineinplan'], item['parentschedule'],item['kindOfWork']) for item in timetable]
+    def __init__(self, payment_period: PaymentPeriod, lecturer: Lecturer):
+        self.payment_period = payment_period
+        self.lecturer = lecturer
+        timetable = ruz.person_lessons(lecturer.email, utils.format_date(payment_period.start_date),
+                                       utils.format_date(payment_period.end_date))
+        self.lessons = [
+            Lesson(lecturer.email, item['date'], item['discipline'], item['disciplineOid'], item['disciplineinplan'],
+                   item['parentschedule'], item['kindOfWork']) for item in timetable]

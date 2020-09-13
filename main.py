@@ -32,7 +32,8 @@ practice = [x for x in lessons if x['kindOfWork'] == 'Практическое �
 subjects = set([x['discipline'] for x in lessons])
 
 if len(lessons) > 0:
-    print(f'Person email: {lecturer_email} (TBD: find name using lookups)')
+    print(f'Teacher:{[x["fio"] for x in ruz.lecturers() if x["email"] == lecturer_email][0]}\n'
+          f'Teacher email: {lecturer_email}')
     print(f'{lecture_payment} RUB for lecture\n{seminar_payment} RUB for'
           f' seminar\n{practice_payment} RUB for practice lesson')
     print(

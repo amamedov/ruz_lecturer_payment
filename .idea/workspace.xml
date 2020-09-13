@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="338af7e6-462f-4501-8275-6de840f2b1f8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export_kind_of_works.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/export_lecturers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kind_of_works_in_ruz.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecturers_in_ruz.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_db_elements/create_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_db_elements/create_db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -12,22 +14,33 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YRdRUF3j7WCiP7JxhmbFqnIBKi" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.export_kind_of_works">
     <configuration name="create_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ruz_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -41,6 +54,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_db_elements/create_db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="export_kind_of_works" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ruz_api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/export_kind_of_works.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="export_lecturers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ruz_api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/export_lecturers.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -72,6 +127,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.export_kind_of_works" />
+        <item itemvalue="Python.export_lecturers" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.create_db" />
       </list>
@@ -95,37 +152,51 @@
       <option name="project" value="LOCAL" />
       <updated>1596827158219</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implemented simple request-response logic in main.py &#10;TBD:&#10;short-term: create db diagram, find place to create it, add some sort of GUI&#10;long-term: add study plans for control of lessons amount, create some sort of lookup like teacher email - teacher name">
+      <created>1600024954179</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600024954179</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="навел красоту&#10;no more pep-8 violations" />
-    <option name="LAST_COMMIT_MESSAGE" value="навел красоту&#10;no more pep-8 violations" />
+    <MESSAGE value="implemented simple request-response logic in main.py &#10;TBD:&#10;short-term: create db diagram, find place to create it, add some sort of GUI&#10;long-term: add study plans for control of lessons amount, create some sort of lookup like teacher email - teacher name" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented simple request-response logic in main.py &#10;TBD:&#10;short-term: create db diagram, find place to create it, add some sort of GUI&#10;long-term: add study plans for control of lessons amount, create some sort of lookup like teacher email - teacher name" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="494" y="120" key="CommitChangelistDialog2" timestamp="1596827157781">
+    <state x="553" y="328" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600026253331">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="494" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1596827157781" />
-    <state width="1659" height="281" key="GridCell.Tab.0.bottom" timestamp="1600024656089">
+    <state x="553" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1600026253331" />
+    <state x="296" y="120" key="CommitChangelistDialog2" timestamp="1600026218745">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1600024656089" />
-    <state width="1659" height="281" key="GridCell.Tab.0.center" timestamp="1600024656089">
+    <state x="296" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600026218745" />
+    <state width="1659" height="281" key="GridCell.Tab.0.bottom" timestamp="1600026323313">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1600024656089" />
-    <state width="1659" height="281" key="GridCell.Tab.0.left" timestamp="1600024656089">
+    <state width="1659" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1600026323313" />
+    <state width="1659" height="281" key="GridCell.Tab.0.center" timestamp="1600026323313">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1600024656089" />
-    <state width="1659" height="281" key="GridCell.Tab.0.right" timestamp="1600024656089">
+    <state width="1659" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1600026323313" />
+    <state width="1659" height="281" key="GridCell.Tab.0.left" timestamp="1600026323313">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1600024656089" />
+    <state width="1659" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1600026323313" />
+    <state width="1659" height="281" key="GridCell.Tab.0.right" timestamp="1600026323313">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1600026323313" />
     <state x="341" y="168" key="SettingsEditor" timestamp="1600022457948">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

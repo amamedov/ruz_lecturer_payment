@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="338af7e6-462f-4501-8275-6de840f2b1f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ruz_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ruz_api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_management/data_export.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_management/data_export.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_management/import_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_management/import_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_db_elements/create_db.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_db_elements/create_db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +25,57 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="create_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ruz_api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/create_db_elements" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/create_db_elements/create_db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ruz_api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.create_db" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -39,16 +88,51 @@
       <option name="presentableId" value="Default" />
       <updated>1582909336972</updated>
     </task>
+    <task id="LOCAL-00001" summary="навел красоту&#10;no more pep-8 violations">
+      <created>1596827158219</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596827158219</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="навел красоту&#10;no more pep-8 violations" />
+    <option name="LAST_COMMIT_MESSAGE" value="навел красоту&#10;no more pep-8 violations" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="494" y="120" key="CommitChangelistDialog2" timestamp="1596826762906">
+    <state x="494" y="120" key="CommitChangelistDialog2" timestamp="1596827157781">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="494" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1596826762906" />
-    <state x="341" y="168" key="SettingsEditor" timestamp="1596826951703">
+    <state x="494" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1596827157781" />
+    <state width="1659" height="281" key="GridCell.Tab.0.bottom" timestamp="1600024656089">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="341" y="168" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1596826951703" />
+    <state width="1659" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1600024656089" />
+    <state width="1659" height="281" key="GridCell.Tab.0.center" timestamp="1600024656089">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1600024656089" />
+    <state width="1659" height="281" key="GridCell.Tab.0.left" timestamp="1600024656089">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1600024656089" />
+    <state width="1659" height="281" key="GridCell.Tab.0.right" timestamp="1600024656089">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1600024656089" />
+    <state x="341" y="168" key="SettingsEditor" timestamp="1600022457948">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="341" y="168" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1600022457948" />
+    <state x="432" y="258" key="Vcs.Push.Dialog.v2" timestamp="1596827162690">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="432" y="258" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596827162690" />
   </component>
 </project>

@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="338af7e6-462f-4501-8275-6de840f2b1f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/export_kind_of_works.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/export_lecturers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kind_of_works_in_ruz.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lecturers_in_ruz.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/export_kind_of_works.py" beforeDir="false" afterPath="$PROJECT_DIR$/export_kind_of_works.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/export_lecturers.py" beforeDir="false" afterPath="$PROJECT_DIR$/export_lecturers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kind_of_works_in_ruz_2020-09-13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ruz_export/kinds_of_work_in_ruz_2020-09-13.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecturers_in_ruz_2020-09-13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ruz_export/lecturers_in_ruz_2020-09-13.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +40,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
-  <component name="RunManager" selected="Python.export_kind_of_works">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment\ruz_export" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
     <configuration name="create_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ruz_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,9 +132,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.export_kind_of_works" />
         <item itemvalue="Python.export_lecturers" />
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.create_db" />
       </list>
     </recent_temporary>
@@ -159,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600024954179</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added fio search by mail&#10;added lookups for lecturers, kinds of work for current date (2020.09.13)">
+      <created>1600026388702</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600026388702</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -169,7 +181,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="навел красоту&#10;no more pep-8 violations" />
     <MESSAGE value="implemented simple request-response logic in main.py &#10;TBD:&#10;short-term: create db diagram, find place to create it, add some sort of GUI&#10;long-term: add study plans for control of lessons amount, create some sort of lookup like teacher email - teacher name" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented simple request-response logic in main.py &#10;TBD:&#10;short-term: create db diagram, find place to create it, add some sort of GUI&#10;long-term: add study plans for control of lessons amount, create some sort of lookup like teacher email - teacher name" />
+    <MESSAGE value="added fio search by mail&#10;added lookups for lecturers, kinds of work for current date (2020.09.13)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fio search by mail&#10;added lookups for lecturers, kinds of work for current date (2020.09.13)" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -177,33 +190,33 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="553" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1600026253331" />
-    <state x="296" y="120" key="CommitChangelistDialog2" timestamp="1600026218745">
+    <state x="296" y="120" key="CommitChangelistDialog2" timestamp="1600114916845">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="296" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600026218745" />
-    <state width="1659" height="281" key="GridCell.Tab.0.bottom" timestamp="1600026323313">
+    <state x="296" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600114916845" />
+    <state width="1659" height="281" key="GridCell.Tab.0.bottom" timestamp="1600114771116">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1600026323313" />
-    <state width="1659" height="281" key="GridCell.Tab.0.center" timestamp="1600026323313">
+    <state width="1659" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1600114771116" />
+    <state width="1659" height="281" key="GridCell.Tab.0.center" timestamp="1600114771115">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1600026323313" />
-    <state width="1659" height="281" key="GridCell.Tab.0.left" timestamp="1600026323313">
+    <state width="1659" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1600114771115" />
+    <state width="1659" height="281" key="GridCell.Tab.0.left" timestamp="1600114771115">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1600026323313" />
-    <state width="1659" height="281" key="GridCell.Tab.0.right" timestamp="1600026323313">
+    <state width="1659" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1600114771115" />
+    <state width="1659" height="281" key="GridCell.Tab.0.right" timestamp="1600114771116">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1600026323313" />
+    <state width="1659" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1600114771116" />
     <state x="341" y="168" key="SettingsEditor" timestamp="1600022457948">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="341" y="168" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1600022457948" />
-    <state x="432" y="258" key="Vcs.Push.Dialog.v2" timestamp="1596827162690">
+    <state x="432" y="258" key="Vcs.Push.Dialog.v2" timestamp="1600026489422">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="432" y="258" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596827162690" />
+    <state x="432" y="258" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1600026489422" />
   </component>
 </project>

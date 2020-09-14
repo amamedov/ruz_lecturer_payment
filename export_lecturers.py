@@ -11,6 +11,6 @@ for x in ruz.lecturers():
     else:
         lecturers[x['email']] = x['fio']
 
-with open(f'lecturers_in_ruz_{datetime.datetime.today().date()}.txt', 'w') as f:
+with open(r'ruz_export/lecturers_in_ruz_{datetime.datetime.today().date()}.txt', 'w') as f:
     for person in lecturers:
         f.write(f'{person}:{lecturers[person]}\n')

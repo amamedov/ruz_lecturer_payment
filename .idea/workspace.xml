@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="338af7e6-462f-4501-8275-6de840f2b1f8" name="Default Changelist" comment="lookup with kinds of work is useless: only lectures, seminars and practice lessons are present in study plans&#10;added study plans and parsing script for them (parse_study_plans.py)">
-      <change afterPath="$PROJECT_DIR$/INFO.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parse_study_plans.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2020 Бакалавриат 2 курс, очная 38.03.05.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2020 Бакалавриат 2 курс, очная 38.03.05.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2020 Бакалавриат 3 курс, очная 38.03.05.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2020 Бакалавриат 3 курс, очная 38.03.05.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2020 Магистратура 1 курс, очная 38.04.05 Бизнес-информатика.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2020 Магистратура 1 курс, очная 38.04.05 Бизнес-информатика.xls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2021 Бакалавриат 3 курс, очная 38.03.05.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2021 Бакалавриат 3 курс, очная 38.03.05.xls" afterDir="false" />
+    <list default="true" id="338af7e6-462f-4501-8275-6de840f2b1f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cumulative_result/sefremov@hse.ru_2020-2021.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/sefremov@hse.ru_2020.09.01_2020.09.30_2020-09-15.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +48,7 @@
       <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment\study_plans" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.parse_study_plans">
+  <component name="RunManager" selected="Python.main">
     <configuration name="create_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ruz_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,8 +156,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.parse_study_plans" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.parse_study_plans" />
         <item itemvalue="Python.export_kind_of_works" />
         <item itemvalue="Python.export_lecturers" />
         <item itemvalue="Python.create_db" />
@@ -203,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600026388702</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="lookup with kinds of work is useless: only lectures, seminars and practice lessons are present in study plans&#10;added study plans and parsing script for them (parse_study_plans.py)">
+      <created>1600199614200</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600199614200</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -214,7 +214,8 @@
     <MESSAGE value="навел красоту&#10;no more pep-8 violations" />
     <MESSAGE value="implemented simple request-response logic in main.py &#10;TBD:&#10;short-term: create db diagram, find place to create it, add some sort of GUI&#10;long-term: add study plans for control of lessons amount, create some sort of lookup like teacher email - teacher name" />
     <MESSAGE value="added fio search by mail&#10;added lookups for lecturers, kinds of work for current date (2020.09.13)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fio search by mail&#10;added lookups for lecturers, kinds of work for current date (2020.09.13)" />
+    <MESSAGE value="lookup with kinds of work is useless: only lectures, seminars and practice lessons are present in study plans&#10;added study plans and parsing script for them (parse_study_plans.py)" />
+    <option name="LAST_COMMIT_MESSAGE" value="lookup with kinds of work is useless: only lectures, seminars and practice lessons are present in study plans&#10;added study plans and parsing script for them (parse_study_plans.py)" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -222,26 +223,26 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="553" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1600026253331" />
-    <state x="296" y="120" key="CommitChangelistDialog2" timestamp="1600198437658">
+    <state x="296" y="120" key="CommitChangelistDialog2" timestamp="1600199613193">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="296" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600198437658" />
-    <state width="1659" height="281" key="GridCell.Tab.0.bottom" timestamp="1600198200313">
+    <state x="296" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600199613193" />
+    <state width="1659" height="281" key="GridCell.Tab.0.bottom" timestamp="1600201306630">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1600198200313" />
-    <state width="1659" height="281" key="GridCell.Tab.0.center" timestamp="1600198200313">
+    <state width="1659" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1600201306630" />
+    <state width="1659" height="281" key="GridCell.Tab.0.center" timestamp="1600201306630">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1600198200313" />
-    <state width="1659" height="281" key="GridCell.Tab.0.left" timestamp="1600198200312">
+    <state width="1659" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1600201306630" />
+    <state width="1659" height="281" key="GridCell.Tab.0.left" timestamp="1600201306630">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1600198200312" />
-    <state width="1659" height="281" key="GridCell.Tab.0.right" timestamp="1600198200313">
+    <state width="1659" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1600201306630" />
+    <state width="1659" height="281" key="GridCell.Tab.0.right" timestamp="1600201306630">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1600198200313" />
+    <state width="1659" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1600201306630" />
     <state x="341" y="168" key="SettingsEditor" timestamp="1600022457948">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

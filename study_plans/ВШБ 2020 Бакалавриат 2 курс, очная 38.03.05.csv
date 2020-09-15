@@ -1,0 +1,17 @@
+discipline;lectures;seminars;practice;module_1;module_2;module_3;module_4
+Право;;20.0;;True;True;True;False
+Программирование;0.0;30.0;;False;True;True;True
+Базы данных;18.0;22.0;0.0;True;True;False;False
+Управление ИТ-проектами;14.0;16.0;0.0;False;True;True;True
+ИТ-инфраструктура для бизнеса;20.0;10.0;;False;True;True;True
+Макроэкономика;20.0;10.0;;True;True;False;True
+Исследование операций;14.0;16.0;;True;True;True;False
+Теория и история менеджмента;26.0;14.0;;True;True;False;False
+Финансовый менеджмент;16.0;14.0;;True;False;True;True
+Финансовый и управленческий учет;26.0;14.0;;False;True;True;True
+Вероятностные и статистические модели управления;18.0;22.0;;True;False;True;True
+Моделирование бизнес-процессов;12.0;18.0;;True;False;True;True
+Практики, проектная и/или исследовательская работа;;30.0;;True;False;False;False
+Научно-исследовательский/Проектный семинар;;30.0;;True;False;False;True
+"Проектный семинар ""Моделирование организации""";;30.0;;True;False;False;True
+Английский язык;;;104.0;False;False;False;True

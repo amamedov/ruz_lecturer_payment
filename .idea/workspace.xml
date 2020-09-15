@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="338af7e6-462f-4501-8275-6de840f2b1f8" name="Default Changelist" comment="">
+    <list default="true" id="338af7e6-462f-4501-8275-6de840f2b1f8" name="Default Changelist" comment="lookup with kinds of work is useless: only lectures, seminars and practice lessons are present in study plans&#10;added study plans and parsing script for them (parse_study_plans.py)">
+      <change afterPath="$PROJECT_DIR$/INFO.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/parse_study_plans.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2020 Бакалавриат 2 курс, очная 38.03.05.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2020 Бакалавриат 2 курс, очная 38.03.05.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2020 Бакалавриат 3 курс, очная 38.03.05.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2020 Бакалавриат 3 курс, очная 38.03.05.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2020 Магистратура 1 курс, очная 38.04.05 Бизнес-информатика.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2020 Магистратура 1 курс, очная 38.04.05 Бизнес-информатика.xls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2021 Бакалавриат 3 курс, очная 38.03.05.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/study_plans/ВШБ 2021 Бакалавриат 3 курс, очная 38.03.05.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/export_kind_of_works.py" beforeDir="false" afterPath="$PROJECT_DIR$/export_kind_of_works.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/export_lecturers.py" beforeDir="false" afterPath="$PROJECT_DIR$/export_lecturers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kind_of_works_in_ruz_2020-09-13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ruz_export/kinds_of_work_in_ruz_2020-09-13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecturers_in_ruz_2020-09-13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ruz_export/lecturers_in_ruz_2020-09-13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,14 +43,19 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/study_plans" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment" />
       <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment\ruz_export" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment\study_plans" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.parse_study_plans">
     <configuration name="create_db" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ruz_api" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,8 +140,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="parse_study_plans" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ruz_api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parse_study_plans.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.parse_study_plans" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.export_kind_of_works" />
         <item itemvalue="Python.export_lecturers" />
@@ -190,33 +222,33 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="553" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1600026253331" />
-    <state x="296" y="120" key="CommitChangelistDialog2" timestamp="1600114916845">
+    <state x="296" y="120" key="CommitChangelistDialog2" timestamp="1600198437658">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="296" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600114916845" />
-    <state width="1659" height="281" key="GridCell.Tab.0.bottom" timestamp="1600114771116">
+    <state x="296" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600198437658" />
+    <state width="1659" height="281" key="GridCell.Tab.0.bottom" timestamp="1600198200313">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1600114771116" />
-    <state width="1659" height="281" key="GridCell.Tab.0.center" timestamp="1600114771115">
+    <state width="1659" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1600198200313" />
+    <state width="1659" height="281" key="GridCell.Tab.0.center" timestamp="1600198200313">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1600114771115" />
-    <state width="1659" height="281" key="GridCell.Tab.0.left" timestamp="1600114771115">
+    <state width="1659" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1600198200313" />
+    <state width="1659" height="281" key="GridCell.Tab.0.left" timestamp="1600198200312">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1600114771115" />
-    <state width="1659" height="281" key="GridCell.Tab.0.right" timestamp="1600114771116">
+    <state width="1659" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1600198200312" />
+    <state width="1659" height="281" key="GridCell.Tab.0.right" timestamp="1600198200313">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1600114771116" />
+    <state width="1659" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1600198200313" />
     <state x="341" y="168" key="SettingsEditor" timestamp="1600022457948">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="341" y="168" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1600022457948" />
-    <state x="432" y="258" key="Vcs.Push.Dialog.v2" timestamp="1600026489422">
+    <state x="432" y="258" key="Vcs.Push.Dialog.v2" timestamp="1600115005977">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="432" y="258" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1600026489422" />
+    <state x="432" y="258" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1600115005977" />
   </component>
 </project>

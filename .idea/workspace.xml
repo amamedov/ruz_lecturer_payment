@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="338af7e6-462f-4501-8275-6de840f2b1f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cumulative_result/sefremov@hse.ru_2020-2021.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/sefremov@hse.ru_2020.09.01_2020.09.30_2020-09-15.txt" afterDir="false" />
+    <list default="true" id="338af7e6-462f-4501-8275-6de840f2b1f8" name="Default Changelist" comment="reworked study plans processing logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parse_study_plans.py" beforeDir="false" afterPath="$PROJECT_DIR$/parse_study_plans.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study_plans/ВШБ 2020 Бакалавриат 2 курс, очная 38.03.05.xls" beforeDir="false" afterPath="$PROJECT_DIR$/study_plans/raw/ВШБ 2020 Бакалавриат 2 курс, очная 38.03.05.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study_plans/ВШБ 2020 Бакалавриат 3 курс, очная 38.03.05.xls" beforeDir="false" afterPath="$PROJECT_DIR$/study_plans/raw/ВШБ 2020 Бакалавриат 3 курс, очная 38.03.05.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study_plans/ВШБ 2020 Магистратура 1 курс, очная 38.04.05 Бизнес-информатика.xls" beforeDir="false" afterPath="$PROJECT_DIR$/study_plans/raw/ВШБ 2020 Магистратура 1 курс, очная 38.04.05 Бизнес-информатика.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study_plans/ВШБ 2021 Бакалавриат 3 курс, очная 38.03.05.xls" beforeDir="false" afterPath="$PROJECT_DIR$/study_plans/raw/ВШБ 2021 Бакалавриат 3 курс, очная 38.03.05.xls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +42,13 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment" />
-      <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment\ruz_export" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment\study_plans" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment\study_plans\raw" />
+      <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment" />
+      <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment\ruz_export" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -223,10 +226,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="553" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1600026253331" />
-    <state x="296" y="120" key="CommitChangelistDialog2" timestamp="1600199613193">
+    <state x="296" y="120" key="CommitChangelistDialog2" timestamp="1600373620457">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="296" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600199613193" />
+    <state x="296" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600373620457" />
     <state width="1659" height="281" key="GridCell.Tab.0.bottom" timestamp="1600201306630">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

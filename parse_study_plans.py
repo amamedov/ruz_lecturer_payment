@@ -1,9 +1,9 @@
 import pandas as pd
 import os
 
-for file in os.listdir('study_plans'):
+for file in os.listdir(r'study_plans/raw'):
 
-    file = 'study_plans\\' + file
+    file = 'study_plans\\raw\\' + file
 
     if file.split('.')[-1] == 'xls':
 

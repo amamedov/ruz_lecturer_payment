@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="338af7e6-462f-4501-8275-6de840f2b1f8" name="Default Changelist" comment="reworked study plans processing logic">
+    <list default="true" id="338af7e6-462f-4501-8275-6de840f2b1f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/result/sbruskin_2020.09.01_2020.09.30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/sbruskin_2020.09.01_2020.10.31.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parse_study_plans.py" beforeDir="false" afterPath="$PROJECT_DIR$/parse_study_plans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study_plans/ВШБ 2020 Бакалавриат 2 курс, очная 38.03.05.xls" beforeDir="false" afterPath="$PROJECT_DIR$/study_plans/raw/ВШБ 2020 Бакалавриат 2 курс, очная 38.03.05.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study_plans/ВШБ 2020 Бакалавриат 3 курс, очная 38.03.05.xls" beforeDir="false" afterPath="$PROJECT_DIR$/study_plans/raw/ВШБ 2020 Бакалавриат 3 курс, очная 38.03.05.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study_plans/ВШБ 2020 Магистратура 1 курс, очная 38.04.05 Бизнес-информатика.xls" beforeDir="false" afterPath="$PROJECT_DIR$/study_plans/raw/ВШБ 2020 Магистратура 1 курс, очная 38.04.05 Бизнес-информатика.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study_plans/ВШБ 2021 Бакалавриат 3 курс, очная 38.03.05.xls" beforeDir="false" afterPath="$PROJECT_DIR$/study_plans/raw/ВШБ 2021 Бакалавриат 3 курс, очная 38.03.05.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cumulative_result/sefremov@hse.ru_2020-2021.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/sefremov@hse.ru_2020.09.01_2020.09.30_2020-09-15.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,13 +42,13 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment\study_plans" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment\study_plans\raw" />
       <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment" />
       <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment\ruz_export" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\ruz_lecturer_payment\study_plans" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -206,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600199614200</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="reworked study plans processing logic&#10;TBD?: rework file processing logic (results) into dfs">
+      <created>1600373922923</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1600373922923</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -218,7 +225,8 @@
     <MESSAGE value="implemented simple request-response logic in main.py &#10;TBD:&#10;short-term: create db diagram, find place to create it, add some sort of GUI&#10;long-term: add study plans for control of lessons amount, create some sort of lookup like teacher email - teacher name" />
     <MESSAGE value="added fio search by mail&#10;added lookups for lecturers, kinds of work for current date (2020.09.13)" />
     <MESSAGE value="lookup with kinds of work is useless: only lectures, seminars and practice lessons are present in study plans&#10;added study plans and parsing script for them (parse_study_plans.py)" />
-    <option name="LAST_COMMIT_MESSAGE" value="lookup with kinds of work is useless: only lectures, seminars and practice lessons are present in study plans&#10;added study plans and parsing script for them (parse_study_plans.py)" />
+    <MESSAGE value="reworked study plans processing logic&#10;TBD?: rework file processing logic (results) into dfs" />
+    <option name="LAST_COMMIT_MESSAGE" value="reworked study plans processing logic&#10;TBD?: rework file processing logic (results) into dfs" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -226,33 +234,33 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="553" y="328" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1600026253331" />
-    <state x="296" y="120" key="CommitChangelistDialog2" timestamp="1600373620457">
+    <state x="296" y="120" key="CommitChangelistDialog2" timestamp="1600373922204">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="296" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600373620457" />
-    <state width="1659" height="281" key="GridCell.Tab.0.bottom" timestamp="1600201306630">
+    <state x="296" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600373922204" />
+    <state width="1659" height="281" key="GridCell.Tab.0.bottom" timestamp="1600896740184">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1600201306630" />
-    <state width="1659" height="281" key="GridCell.Tab.0.center" timestamp="1600201306630">
+    <state width="1659" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1600896740184" />
+    <state width="1659" height="281" key="GridCell.Tab.0.center" timestamp="1600896740184">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1600201306630" />
-    <state width="1659" height="281" key="GridCell.Tab.0.left" timestamp="1600201306630">
+    <state width="1659" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1600896740184" />
+    <state width="1659" height="281" key="GridCell.Tab.0.left" timestamp="1600896740184">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1600201306630" />
-    <state width="1659" height="281" key="GridCell.Tab.0.right" timestamp="1600201306630">
+    <state width="1659" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1600896740184" />
+    <state width="1659" height="281" key="GridCell.Tab.0.right" timestamp="1600896740184">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1659" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1600201306630" />
+    <state width="1659" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1600896740184" />
     <state x="341" y="168" key="SettingsEditor" timestamp="1600022457948">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="341" y="168" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1600022457948" />
-    <state x="432" y="258" key="Vcs.Push.Dialog.v2" timestamp="1600115005977">
+    <state x="432" y="258" key="Vcs.Push.Dialog.v2" timestamp="1600373930423">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="432" y="258" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1600115005977" />
+    <state x="432" y="258" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1600373930423" />
   </component>
 </project>

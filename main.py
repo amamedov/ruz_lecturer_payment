@@ -1,6 +1,7 @@
 import ruz
 import datetime
 import os
+import pandas as pd
 from operator import itemgetter
 
 def load_latest_lookups():
@@ -84,21 +85,28 @@ lecturers, kinds_of_work = load_latest_lookups()
 # lecturer_email = 'sefremov@hse.ru'
 lecturer_email = str(input('Enter person`s email: '))
 
-# start_date = '2020.09.01'
-start_date = str(input('Enter start date of searched period (YYYY.mm.dd): '))
+start_date = '2020.09.01'
+print('Start date of period: 2020.09.01')
+# start_date = str(input('Enter start date of searched period (YYYY.mm.dd): '))
 
 # end_date = '2020.09.30'
 end_date = str(input('Enter end date of searched period (YYYY.mm.dd): '))
 
-print('Please enter numeric values (no check implemented yet)\n')
-# lecture_payment = 100
-lecture_payment = float(input('Enter lecture wage: '))
-
-# seminar_payment = 1750
-seminar_payment = float(input('Enter seminar wage: '))
-
-# practice_payment = 20
-practice_payment = float(input('Enter practice lesson wage: '))
+old_result = pd.DataFrame()
+previous_records = [x for x in os.listdir('result') if lecturer_email.split('@')[0] in x]
+if len(previous_records) == 0:
+    print('Please enter numeric values (no check implemented yet)\n')
+    lecture_payment = float(input('Enter lecture wage: '))
+    seminar_payment = float(input('Enter seminar wage: '))
+    practice_payment = float(input('Enter practice lesson wage: '))
+else:
+    temp = [('result\\' + x, datetime.datetime.strptime(os.path.splitext(x)[0].split('_')[-1], '%Y.%m.%d')) for x in
+            previous_records]
+    temp.sort(key=itemgetter(1))
+    old_result = pd.read_csv(temp[0][0], sep=';')
+    lecture_payment = old_result.lecture_payment.max()
+    seminar_payment = old_result.seminar_payment.max()
+    practice_payment = old_result.practice_payment.max()
 
 lessons = ruz.person_lessons(lecturer_email, start_date, end_date)
 lectures = [x for x in lessons if x['kindOfWork'] == 'Лекция']
@@ -108,19 +116,32 @@ subjects = set([x['discipline'] for x in lessons])
 
 # console_output()
 
-result = f'[{lecture_payment}, {seminar_payment}, {practice_payment}]\n'
-# result structure: [wages]\n subject: lectures, seminars, practice,  payment
-for subject in subjects:
-    result += f'{subject}:{len([x for x in seminars if x["discipline"] == subject])}' \
-              f',{len([x for x in lectures if x["discipline"] == subject])}' \
-              f',{len([x for x in practice if x["discipline"] == subject])}' \
-              f',{len(seminars) * seminar_payment + len(lectures) * lecture_payment + len(practice) * practice_payment}'
+total_payment = len(seminars) * seminar_payment + len(lectures) * lecture_payment + len(practice) * practice_payment
 
-with open(f'result\\{lecturer_email}_{start_date}_{end_date}_{datetime.datetime.today().date()}.txt', 'w') as f:
-    f.write(result)
+result_df = pd.DataFrame(data={'subject': list(subjects)})
 
-if not os.path.exists(f'cumulative_result\\{lecturer_email}_{datetime.datetime.today().year}-'
-                      f'{datetime.datetime.today().year + 1}.txt'):
-    with open(f'cumulative_result\\{lecturer_email}_{datetime.datetime.today().year}-'
-              f'{datetime.datetime.today().year + 1}.txt', 'w') as f:
-        f.write(result)
+result_df['start_date'] = start_date
+result_df['end_date'] = end_date
+result_df['lecture_payment'] = lecture_payment
+result_df['seminar_payment'] = seminar_payment
+result_df['practice_payment'] = practice_payment
+result_df['lecture_cnt'] = result_df.subject.apply(lambda subject:
+                                                   len([x for x in lectures if x["discipline"] == subject]))
+result_df['seminar_cnt'] = result_df.subject.apply(lambda subject:
+                                                   len([x for x in seminars if x["discipline"] == subject]))
+result_df['practice_cnt'] = result_df.subject.apply(lambda subject:
+                                                    len([x for x in practice if x["discipline"] == subject]))
+
+result_df['payment'] = result_df.apply(axis=1, func=(lambda x: x.lecture_payment * x.lecture_cnt
+                                                               + x.seminar_payment * x.seminar_cnt
+                                                               + x.practice_payment * x.practice_cnt))
+result_df['is_overpaid'] = 0
+result_df['is_overworking'] = 0
+if old_result.shape[0] != 0:
+    result_df.is_overpaid = result_df.subject.apply(lambda x: 1 if
+    result_df.loc[result_df.subject == x, 'payment'].values[0] <
+    old_result[old_result.subject == x].payment.values[0]
+    else 0)
+
+result_df.sort_values(by='subject').to_csv(f'result\\{lecturer_email.split("@")[0]}_{start_date}_{end_date}.csv',
+                                           sep=';', index=False)

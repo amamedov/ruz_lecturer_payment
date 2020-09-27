@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="338af7e6-462f-4501-8275-6de840f2b1f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/result/sbruskin_2020.09.01_2020.09.30.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/sbruskin_2020.09.01_2020.10.31.csv" afterDir="false" />
+    <list default="true" id="338af7e6-462f-4501-8275-6de840f2b1f8" name="Default Changelist" comment="reworked study plans processing logic">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/osimakov_2020.09.01_2020.09.30.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/osimakov_2020.09.01_2020.10.31.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/sefremov_2020.09.01_2020.10.31.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ruz_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ruz_api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cumulative_result/sefremov@hse.ru_2020-2021.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/sefremov@hse.ru_2020.09.01_2020.09.30_2020-09-15.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +50,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -167,6 +186,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -219,6 +239,18 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.sql" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="навел красоту&#10;no more pep-8 violations" />
@@ -238,29 +270,34 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="296" y="120" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1600373922204" />
-    <state width="1659" height="281" key="GridCell.Tab.0.bottom" timestamp="1600896740184">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1514" height="213" key="GridCell.Tab.0.bottom" timestamp="1601014930908">
+      <screen x="0" y="0" width="1536" height="826" />
     </state>
+    <state width="1514" height="213" key="GridCell.Tab.0.bottom/0.0.1536.826@0.0.1536.826" timestamp="1601014930908" />
     <state width="1659" height="281" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1600896740184" />
-    <state width="1659" height="281" key="GridCell.Tab.0.center" timestamp="1600896740184">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1514" height="213" key="GridCell.Tab.0.center" timestamp="1601014930908">
+      <screen x="0" y="0" width="1536" height="826" />
     </state>
+    <state width="1514" height="213" key="GridCell.Tab.0.center/0.0.1536.826@0.0.1536.826" timestamp="1601014930908" />
     <state width="1659" height="281" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1600896740184" />
-    <state width="1659" height="281" key="GridCell.Tab.0.left" timestamp="1600896740184">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1514" height="213" key="GridCell.Tab.0.left" timestamp="1601014930908">
+      <screen x="0" y="0" width="1536" height="826" />
     </state>
+    <state width="1514" height="213" key="GridCell.Tab.0.left/0.0.1536.826@0.0.1536.826" timestamp="1601014930908" />
     <state width="1659" height="281" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1600896740184" />
-    <state width="1659" height="281" key="GridCell.Tab.0.right" timestamp="1600896740184">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state width="1514" height="213" key="GridCell.Tab.0.right" timestamp="1601014930908">
+      <screen x="0" y="0" width="1536" height="826" />
     </state>
+    <state width="1514" height="213" key="GridCell.Tab.0.right/0.0.1536.826@0.0.1536.826" timestamp="1601014930908" />
     <state width="1659" height="281" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1600896740184" />
     <state x="341" y="168" key="SettingsEditor" timestamp="1600022457948">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="341" y="168" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1600022457948" />
-    <state x="432" y="258" key="Vcs.Push.Dialog.v2" timestamp="1600373930423">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="395" y="203" key="Vcs.Push.Dialog.v2" timestamp="1600939933370">
+      <screen x="0" y="0" width="1536" height="826" />
     </state>
+    <state x="395" y="203" key="Vcs.Push.Dialog.v2/0.0.1536.826@0.0.1536.826" timestamp="1600939933370" />
     <state x="432" y="258" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1600373930423" />
   </component>
 </project>

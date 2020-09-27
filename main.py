@@ -3,6 +3,7 @@ import datetime
 import os
 import pandas as pd
 from operator import itemgetter
+import fuzzywuzzy as fw
 
 def load_latest_lookups():
     lecturers = {}
@@ -85,6 +86,9 @@ lecturers, kinds_of_work = load_latest_lookups()
 # lecturer_email = 'sefremov@hse.ru'
 lecturer_email = str(input('Enter person`s email: '))
 
+study_plan = pd.read_csv('study_plans\\ВШБ 2020 Бакалавриат 2 курс, очная 38.03.05.csv', sep=';')
+print(study_plan.columns)
+
 start_date = '2020.09.01'
 print('Start date of period: 2020.09.01')
 # start_date = str(input('Enter start date of searched period (YYYY.mm.dd): '))
@@ -142,6 +146,14 @@ if old_result.shape[0] != 0:
     result_df.loc[result_df.subject == x, 'payment'].values[0] <
     old_result[old_result.subject == x].payment.values[0]
     else 0)
+    result_df.is_overworking = result_df.apply(axis=1, func=lambda x: 1 if
+    (study_plan[study_plan.discipline == fw.process.extractOne(x.subject, study_plan.discipline)][
+         'seminars'] > x.seminar_cnt)
+    or study_plan[study_plan.discipline == fw.process.extractOne(x.subject, study_plan.discipline)][
+        'lectures'] > x.lecture_cnt)
+    or study_plan[study_plan.discipline == fw.process.extractOne(x.subject, study_plan.discipline)][
+           'practice'] > x.practice_cnt)
+    else 0)
 
-result_df.sort_values(by='subject').to_csv(f'result\\{lecturer_email.split("@")[0]}_{start_date}_{end_date}.csv',
-                                           sep=';', index=False)
+    result_df.sort_values(by='subject').to_csv(f'result\\{lecturer_email.split("@")[0]}_{start_date}_{end_date}.csv',
+                                               sep=';', index=False)
